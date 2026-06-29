@@ -67,7 +67,7 @@ export default function DashboardPage() {
 
           <div className="grid grid-cols-3 gap-4">
             <div className="bg-white rounded shadow p-4">
-              <p className="text-blue-500 text-sm">Total Clients</p>
+              <p className="text-blue-500 text-sm">Total Revenue</p>
               <p className="text-3xl font-bold text-blue-300">1,240</p>
             </div>
             <div className="bg-white rounded shadow p-4">
