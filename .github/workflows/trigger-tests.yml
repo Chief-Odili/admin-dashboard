@@ -1,0 +1,25 @@
+name: Trigger Playwright Tests
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Playwright tests in admin-dashboard-tests
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.PLAYWRIGHT_TRIGGER_TOKEN }}
+          script: |
+            await github.rest.repos.createDispatchEvent({
+              owner: 'Chief-Odili',
+              repo: 'admin-dashboard-tests',
+              event_type: 'run-playwright-tests',
+              client_payload: {
+                repo: 'admin-dashboard'
+              }
+            });
+            console.log(' Triggered Playwright tests in admin-dashboard-tests');
