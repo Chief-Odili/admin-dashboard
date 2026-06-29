@@ -71,7 +71,7 @@ export default function DashboardPage() {
               <p className="text-3xl font-bold text-blue-300">1,240</p>
             </div>
             <div className="bg-white rounded shadow p-4">
-              <p className="text-blue-500 text-sm">Active Sessions</p>
+              <p className="text-blue-500 text-sm">Live Sessions</p>
               <p className="text-3xl font-bold text-blue-300">48</p>
             </div>
             <div className="bg-white rounded shadow p-4">
